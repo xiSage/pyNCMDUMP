@@ -105,7 +105,7 @@ def dump_single_file(filepath):
             image_size = f.read(4)
             image_size = struct.unpack('<I', bytes(image_size))[0]
             image_data = f.read(image_size)
-            target_filename = filename + '.' + meta_data['format']
+            target_filename = (r'ncm$', meta_data['format'], filepath)
 
             with open(target_filename, 'wb') as m:
                 chunk = bytearray()
