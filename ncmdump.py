@@ -4,6 +4,7 @@ import base64
 import struct
 import logging
 import binascii
+import re
 from glob import glob
 from tqdm.auto import tqdm
 from textwrap import dedent
